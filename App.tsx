@@ -353,22 +353,20 @@ export default function App() {
         </div>
 
         {/* Right: Job Description */}
-        <div className="space-y-4 md:space-y-6 flex flex-col h-full">
-          <div className="flex-grow">
+        <div className="space-y-4 md:space-y-6 flex flex-col">
+          <div>
             <label className="block text-sm font-semibold text-slate-700 mb-2 md:mb-3">
               2. Target Job Description <span className="text-red-500">*</span>
             </label>
             <p className="text-xs text-slate-500 mb-3">
               ⚠️ <strong>Important:</strong> The more detailed the job description, the better the resume match
             </p>
-            <div className="h-[180px] sm:h-[250px] md:h-full min-h-[150px] relative">
-              <textarea 
-                className="w-full h-full p-4 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-blue-500 focus:outline-none text-xs md:text-sm resize-none transition-shadow"
-                placeholder="Paste the full job description here (job title, requirements, responsibilities, qualifications)..."
-                value={jobDesc}
-                onChange={(e) => setJobDesc(e.target.value)}
-              ></textarea>
-            </div>
+            <textarea 
+              className="w-full h-48 sm:h-56 md:h-64 p-4 rounded-xl border border-slate-200 bg-slate-50 focus:ring-2 focus:ring-blue-500 focus:outline-none text-xs md:text-sm resize-none transition-shadow"
+              placeholder="Paste the full job description here (job title, requirements, responsibilities, qualifications)..."
+              value={jobDesc}
+              onChange={(e) => setJobDesc(e.target.value)}
+            ></textarea>
           </div>
           
           <button 
